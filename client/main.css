@@ -1,3 +1,50 @@
+body{
+    text-align: center;
+}
+
 a{
     outline: 0 !important;
+}
+
+#sign-in-form header{
+    text-align: center;
+}
+
+#sign-in-form{
+    text-align: left;
+}
+#sign-in-form h4{
+    display: inline-block;
+}
+#sign-in-form a{
+    color: #58585A;
+    float: right;
+    transition: all .2s;
+}
+#sign-in-form a:hover{
+    color: #C81F25;
+    text-decoration: none;
+}
+#sign-in-form input{
+    border: 1px solid #999;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding:5px;
+    transition: all .2s;
+    width: 100%;
+}
+#sign-in-form input:hover,
+#sign-in-form input:active,
+#sign-in-form input:focus{
+    border: 1px solid #71A763;
+}
+#sign-in-form .submit-button{
+    background: #C81F25;
+    color: #fff;
+    margin-top: 15px;
+    width: 30%;
+}
+#sign-in-form .submit-button:hover{
+    background: #71A763;
+    border: 1px solid #71A763;
 }
