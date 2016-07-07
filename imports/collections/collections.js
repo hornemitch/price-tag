@@ -1,0 +1,30 @@
+import {Mongo} from 'meteor/mongo';
+
+export const chassis         = new Mongo.Collection("chassis");
+export const cooling         = new Mongo.Collection("cooling");
+export const cpu             = new Mongo.Collection("cpu");
+export const gpu             = new Mongo.Collection("gpu");
+export const memory          = new Mongo.Collection("memory");
+export const motherboard     = new Mongo.Collection("motherboard");
+export const psu             = new Mongo.Collection("psu");
+export const serverRacks     = new Mongo.Collection("serverRacks");
+export const soundCard       = new Mongo.Collection("soundCard");
+export const storage         = new Mongo.Collection("storage");
+
+export const diskDrive       = new Mongo.Collection("diskDrive");
+export const flash           = new Mongo.Collection("flash");
+export const controller      = new Mongo.Collection("controller");
+export const game            = new Mongo.Collection("game");
+export const headSet         = new Mongo.Collection("headSet");
+export const keyboard        = new Mongo.Collection("keyboard");
+export const monitor         = new Mongo.Collection("monitor");
+export const mouse           = new Mongo.Collection("mouse");
+export const peripheral      = new Mongo.Collection("peripheral");
+export const powerProtection = new Mongo.Collection("powerProtection");
+export const printer         = new Mongo.Collection("printer");
+export const printSupply     = new Mongo.Collection("printSupply");
+export const projector       = new Mongo.Collection("projector");
+export const raid            = new Mongo.Collection("raid");
+export const sdCardReader    = new Mongo.Collection("sdCardReader");
+export const speakers        = new Mongo.Collection("speakers");
+export const webCam          = new Mongo.Collection("webCam");
