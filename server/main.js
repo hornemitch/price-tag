@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Accounts } from 'meteor/accounts-base';
+import { cpu } from  "../imports/collections/collections";
 
 Meteor.startup(() => {
     const admins = [{

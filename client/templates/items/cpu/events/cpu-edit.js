@@ -1,23 +1,24 @@
-Template.CpuAdd.events({
+Template.CpuEdit.events({
     "click #backButton"(){
         FlowRouter.go("/cpu");
     },
-    "submit #add-form" (e){
+    "submit #edit-form" (e){
         e.preventDefault();
 
         const user = Meteor.user();
 
-        let Processor = {
+        let Object = {
             name : e.target.name.value,
             manufacturer : e.target.manufacturer.value,
             model : e.target.model.value,
             socket : e.target.socket.value,
             price : e.target.price.value,
             description : e.target.description.value,
-            website : e.target.website.value
+            website : e.target.website.value,
+            stock: e.target.stock.value
         };
 
-        Meteor.call("addCpu", Processor, user);
+        Meteor.call("editCpu", FlowRouter._current.params.id, Object, user);
         FlowRouter.go("/cpu");
     }
 });

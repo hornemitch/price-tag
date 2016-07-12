@@ -16,6 +16,7 @@ standard-minifier-css
 standard-minifier-js
 es5-shim
 ecmascript
+session
 
 accounts-password
 alanning:roles
@@ -23,3 +24,5 @@ twbs:bootstrap
 themeteorchef:bert
 kadira:flow-router
 kadira:blaze-layout
+aldeed:tabular
+msavin:mongol

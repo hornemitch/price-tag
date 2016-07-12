@@ -1,23 +1,24 @@
-Template.CpuAdd.events({
+Template.ChassisAdd.events({
     "click #backButton"(){
-        FlowRouter.go("/cpu");
+        FlowRouter.go("/chassis");
     },
     "submit #add-form" (e){
         e.preventDefault();
 
         const user = Meteor.user();
 
-        let Processor = {
+        let Chassis = {
             name : e.target.name.value,
             manufacturer : e.target.manufacturer.value,
             model : e.target.model.value,
-            socket : e.target.socket.value,
+            type : e.target.type.value,
             price : e.target.price.value,
+            psuMount : e.target.psuMount.value,
             description : e.target.description.value,
             website : e.target.website.value
         };
 
-        Meteor.call("addCpu", Processor, user);
-        FlowRouter.go("/cpu");
+        Meteor.call("addChassis", Chassis, user);
+        FlowRouter.go("/chassis");
     }
 });

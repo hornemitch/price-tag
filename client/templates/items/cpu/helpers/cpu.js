@@ -1,3 +1,4 @@
-/**
- * Created by mitch-pc on 2016-07-06.
- */
+Template.CpuMain.onCreated(()=> {
+    Meteor.subscribe("cpu");
+});
+

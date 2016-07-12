@@ -1,0 +1,57 @@
+<template name="ChassisEdit">
+    <div class="form-container">
+        <form id="edit-form">
+            <div class="row">
+                <header>
+                    <h1>Edit Chassis: {{chassis.name}}</h1>
+                </header>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Chassis Name</h3>
+                    <input name="name" type="text" onClick="this.select();" value="{{chassis.name}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Manufacturer</h3>
+                    <input name="manufacturer" type="text" onClick="this.select();" value="{{chassis.manufacturer}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Model</h3>
+                    <input name="model" type="text" onClick="this.select();" value="{{chassis.model}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Size Type</h3>
+                    <input name="type" type="text" onClick="this.select();" value="{{chassis.type}}"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Price</h3>
+                    <input name="price" type="text" onClick="this.select();" value="{{chassis.price}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>PSU Mounting</h3>
+                    <input name="psuMount" type="text" onClick="this.select();" value="{{chassis.psuMount}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Website URL</h3>
+                    <input name="website" type="text" onClick="this.select();" value="{{chassis.website}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Available Stock</h3>
+                    <input name="stock" type="text" onClick="this.select();" value="{{chassis.stock}}"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Description</h3>
+                    <textarea name="description" onClick="this.select();" rows="3">{{chassis.description}}</textarea>
+                    <input class="submit-button" id="backButton" type="button" value="Back"/>
+                    <input class="submit-button" type="submit" value="Save"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

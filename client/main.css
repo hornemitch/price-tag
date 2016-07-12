@@ -1,3 +1,5 @@
+/* Main Body styling */
+
 body{
     text-align: center;
 }
@@ -5,6 +7,20 @@ body{
 a{
     outline: 0 !important;
 }
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none;
+}
+
+
+/* Tooltips */
+
+.tooltip {
+    font-size: 1.2em;
+}
+
+/* Login Form */
 
 #sign-in-form header{
     text-align: center;
@@ -47,4 +63,181 @@ a{
 #sign-in-form .submit-button:hover{
     background: #71A763;
     border: 1px solid #71A763;
+}
+
+/* Add forms */
+
+.form-container{
+    padding: 0 5%;
+}
+.form-container{
+    border-radius: 10px;
+    box-shadow: 0 0 5px #333;
+    padding: 30px 30px 50px;
+    text-align: left;
+}
+.form-container header{
+    text-align: center;
+}
+.form-container h4{
+    display: inline-block;
+}
+.form-container a{
+    color: #58585A;
+    float: right;
+    transition: all .2s;
+}
+.form-container a:hover{
+    color: #C81F25;
+    text-decoration: none;
+}
+.form-container input{
+    border: 1px solid #999;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding:5px;
+    transition: all .2s;
+    width: 100%;
+}
+.form-container input:hover,
+.form-container input:active,
+.form-container input:focus{
+    border: 1px solid #71A763;
+}
+.form-container textarea{
+    border: 1px solid #999;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding:5px;
+    transition: all .2s;
+    width: 100%;
+}
+.form-container textarea:hover,
+.form-container textarea:active,
+.form-container textarea:focus{
+    border: 1px solid #71A763;
+}
+.form-container .submit-button{
+    background: #C81F25;
+    color: #fff;
+    margin-top: 25px;
+    position: relative;
+    width: 40%;
+}
+.form-container .submit-button:hover,
+.form-container .submit-button:focus{
+    background: #71A763;
+    border: 1px solid #71A763;
+}
+
+/* Data-tables */
+.sorting,
+.table > thead:first-child > tr:first-child > th{
+    text-align: center;
+}
+.dataTables_length,
+.dataTables_info{
+    text-align: left;
+}
+.table-condensed > tbody > tr > td{
+    padding-left: 10px;
+    text-align: left;
+}
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > a:active{
+    background: #71A763;
+    border: 1px solid #71A763;
+}
+.pagination > a:hover{
+    background: #C81F25;
+}
+.page-buttons{
+    text-align: left;
+}
+.page-buttons .button{
+    background: #C81F25;
+    border: 1px solid #C81F25;
+    border-radius: 10px;
+    color: #fff;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: all .2s;
+}
+.page-buttons .button:hover{
+    background: #71A763;
+    border: 1px solid #71A763;
+    text-decoration: none;
+    text-shadow: 0 0 5px #fff;
+}
+.centered{
+    text-align: center !important;
+}
+/* Admin dashboard */
+
+.home-parts{
+    font-size: 16px;
+    padding: 10px 25px;
+    text-align: left;
+}
+.home-parts span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.home-parts a{
+    background: #C81F25;
+    border-radius: 10px 0 0 10px;
+    color: #fff;
+    margin: 0 -5px 0 0;
+    padding: 10px 15px;
+    transition: all .2s;
+ }
+.home-parts a:hover{
+    background: #71A763;
+    text-decoration: none;
+    text-shadow: 0 0 5px #fff;
+}
+.home-parts-count{
+    background: #999;
+    border-radius: 0 10px 10px 0;
+    color: #111;
+    margin-right: 20px;
+    padding: 10px 15px;
+}
+
+/* Icons */
+
+.icons{
+    display: inline-block;
+}
+.icons a{
+    color: #222;
+    font-size: 1.5em;
+    padding-right: 10px;
+    transition: all .2s;
+}
+.delete-icon:hover,
+.delete-icon:focus,
+.delete-icon:active{
+    color: #E62000;
+    text-shadow: 0 0 5px #F73000;
+}
+.edit-icon:hover,
+.edit-icon:focus,
+.edit-icon:active{
+    color: #E69400;
+    text-shadow: 0 0 5px #F7A500;
+}
+.increase-icon:hover,
+.increase-icon:focus,
+.increase-icon:active{
+    color: #00f;
+    text-shadow: 0 0 5px #00e;
+}
+.decrease-icon:hover,
+.decrease-icon:focus,
+.decrease-icon:active{
+    color: #E62000;
+    text-shadow: 0 0 5px #F73000;
 }
