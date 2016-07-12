@@ -1,0 +1,62 @@
+<template name="GpuEdit">
+    <div class="form-container">
+        <form id="edit-form">
+            <div class="row">
+                <header>
+                    <h1>Edit Graphics Card: {{gpu.name}}</h1>
+                </header>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Graphics Card Name</h3>
+                    <input name="name" type="text" onClick="this.select();" value="{{gpu.name}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Manufacturer</h3>
+                    <input name="manufacturer" type="text" onClick="this.select();" value="{{gpu.manufacturer}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Model</h3>
+                    <input name="model" type="text" onClick="this.select();" value="{{gpu.model}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Memory</h3>
+                    <input name="memory" type="text" onClick="this.select();" value="{{gpu.memory}}"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Core Clock Speed</h3>
+                    <input name="coreClock" type="text" onClick="this.select();" value="{{gpu.coreClock}}" />
+                </div>
+                <div class="col-md-3">
+                    <h3>PCI Slot</h3>
+                    <input name="pci" type="text" onClick="this.select();" value="{{gpu.pci}}" />
+                </div>
+                <div class="col-md-3">
+                    <h3>Price</h3>
+                    <input name="price" type="text" onClick="this.select();" value="{{gpu.price}}"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Website URL</h3>
+                    <input name="website" type="text" onClick="this.select();" value="{{gpu.website}}"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Available Stock</h3>
+                    <input name="stock" type="text" onClick="this.select();" value="{{gpu.stock}}"/>
+                    <input class="submit-button" id="backButton" type="button" value="Back"/>
+                    <input class="submit-button" type="submit" value="Save"/>
+                </div>
+                <div class="col-md-3">
+                    <h3>Description</h3>
+                    <textarea name="description" onClick="this.select();" rows="3">{{gpu.description}}</textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>
