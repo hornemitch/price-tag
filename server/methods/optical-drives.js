@@ -1,48 +1,42 @@
-import { memory } from "../../imports/collections/collections";
+import { opticalDrive } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addOpticalDrive": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
-                    clockSpeed : obj.clockSpeed,
-                    generation : obj.generation,
+                opticalDrive.insert({
                     manufacturer : obj.manufacturer,
                     model : obj.model,
                     name : obj.name,
-                    platform : obj.platform,
                     price : obj.price,
-                    size : obj.size,
                     stock : obj.stock,
+                    type : obj.type,
                     website : obj.website
                 });
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editOpticalDrive": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                opticalDrive.update(id,{
                     $set:{
-                        clockSpeed : obj.clockSpeed,
-                        generation : obj.generation,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
-                        platform : obj.platform,
                         price : obj.price,
-                        size : obj.size,
                         stock : obj.stock,
+                        type : obj.type,
                         website : obj.website
                     }
                 });
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteOpticalDrive": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                opticalDrive.remove(obj._id);
             }
         }
     }

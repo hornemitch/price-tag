@@ -3,15 +3,17 @@ import {Mongo} from 'meteor/mongo';
 export const chassis         = new Mongo.Collection("chassis");
 export const cooling         = new Mongo.Collection("cooling");
 export const cpu             = new Mongo.Collection("cpu");
+export const externalStorage = new Mongo.Collection("externalStorage");
 export const gpu             = new Mongo.Collection("gpu");
 export const memory          = new Mongo.Collection("memory");
+export const memoryKit       = new Mongo.Collection("memoryKit");
 export const motherboard     = new Mongo.Collection("motherboard");
 export const psu             = new Mongo.Collection("psu");
 export const serverRacks     = new Mongo.Collection("serverRacks");
 export const soundCard       = new Mongo.Collection("soundCard");
 export const storage         = new Mongo.Collection("storage");
 
-export const diskDrive       = new Mongo.Collection("diskDrive");
+export const opticalDrive       = new Mongo.Collection("opticalDrive");
 export const flash           = new Mongo.Collection("flash");
 export const controller      = new Mongo.Collection("controller");
 export const game            = new Mongo.Collection("game");

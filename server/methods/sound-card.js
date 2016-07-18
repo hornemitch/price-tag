@@ -1,37 +1,33 @@
-import { memory } from "../../imports/collections/collections";
+import { soundCard } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addSoundCard": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
-                    clockSpeed : obj.clockSpeed,
-                    generation : obj.generation,
+                soundCard.insert({
+                    channels : obj.channels,
+                    housing : obj.housing,
                     manufacturer : obj.manufacturer,
                     model : obj.model,
                     name : obj.name,
-                    platform : obj.platform,
                     price : obj.price,
-                    size : obj.size,
                     stock : obj.stock,
                     website : obj.website
                 });
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editSoundCard": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                soundCard.update(id,{
                     $set:{
-                        clockSpeed : obj.clockSpeed,
-                        generation : obj.generation,
+                        channels : obj.channels,
+                        housing : obj.housing,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
-                        platform : obj.platform,
                         price : obj.price,
-                        size : obj.size,
                         stock : obj.stock,
                         website : obj.website
                     }
@@ -39,10 +35,10 @@ Meteor.methods({
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteSoundCard": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                soundCard.remove(obj._id);
             }
         }
     }

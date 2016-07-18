@@ -1,11 +1,11 @@
-import { chassis } from "../imports/collections/collections";
+import { psu } from "../imports/collections/collections";
 import { Tabular } from "meteor/aldeed:tabular";
 
 TabularTables = {};
 
-TabularTables.Chassis = new Tabular.Table({
-    name: "Chassis",
-    collection: chassis,
+TabularTables.PSU = new Tabular.Table({
+    name: "PSU",
+    collection: psu,
     order: [[0 , 'asc']],
     scrollCollapse:true,
     scrollX:true,
@@ -16,9 +16,10 @@ TabularTables.Chassis = new Tabular.Table({
         {data: "name", title: "Name"},
         {data: "manufacturer", title: "Manufacturer"},
         {data: "model", title: "Model"},
-        {data: "caseType", title: "Case Size"},
-        {data: "price",tmpl: Meteor.isClient && Template.price, title: "Price"},
-        {data: "stock", title: "Stock Availability", class:"col-md-2"},
+        {data: "watt", title: "Output"},
+        {data: "price", title: "Price"},
+        {data: "website", title: "Website"},
+        {data: "stock", title: "Available"},
         {class: "centered", tmpl: Meteor.isClient && Template.icons, title: "Actions"}
     ]
 });

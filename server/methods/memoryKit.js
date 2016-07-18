@@ -1,10 +1,10 @@
-import { memory } from "../../imports/collections/collections";
+import { memoryKit } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addMemoryKit": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
+                memoryKit.insert({
                     clockSpeed : obj.clockSpeed,
                     generation : obj.generation,
                     manufacturer : obj.manufacturer,
@@ -19,19 +19,21 @@ Meteor.methods({
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editMemoryKit": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                memoryKit.update(id,{
                     $set:{
                         clockSpeed : obj.clockSpeed,
+                        description : obj.description,
                         generation : obj.generation,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
                         platform : obj.platform,
                         price : obj.price,
-                        size : obj.size,
+                        sizeStickNumber : obj.sizeStickNumber,
+                        sizeTotal : obj.sizeTotal,
                         stock : obj.stock,
                         website : obj.website
                     }
@@ -39,10 +41,10 @@ Meteor.methods({
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteMemoryKit": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                memoryKit.remove(obj._id);
             }
         }
     }

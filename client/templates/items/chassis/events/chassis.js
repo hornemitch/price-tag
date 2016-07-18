@@ -1,3 +1,5 @@
+import { chassis } from "../../../../../imports/collections/collections"
+
 Template.ChassisMain.events({
     "click .delete-icon"(){
         const obj = this;
@@ -9,15 +11,5 @@ Template.ChassisMain.events({
     "click .edit-icon"(){
         let path = "/chassis/edit/" + this._id;
         FlowRouter.go(path);
-    },
-    "click .increase-icon"(){
-        const obj = this;
-        const user = Meteor.user();
-        Meteor.call("increaseChassis", obj, user);
-    },
-    "click .decrease-icon"(){
-        const obj = this;
-        const user = Meteor.user();
-        Meteor.call("decreaseChassis", obj, user);
     }
 });

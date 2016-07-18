@@ -1,48 +1,46 @@
-import { memory } from "../../imports/collections/collections";
+import { externalStorage } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addExternalStorage": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
-                    clockSpeed : obj.clockSpeed,
-                    generation : obj.generation,
+                externalStorage.insert({
+                    capacity : obj.capacity,
                     manufacturer : obj.manufacturer,
                     model : obj.model,
                     name : obj.name,
-                    platform : obj.platform,
+                    powered : obj.powered,
                     price : obj.price,
-                    size : obj.size,
                     stock : obj.stock,
+                    type : obj.type,
                     website : obj.website
                 });
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editExternalStorage": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                externalStorage.update(id,{
                     $set:{
-                        clockSpeed : obj.clockSpeed,
-                        generation : obj.generation,
+                        capacity : obj.capacity,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
-                        platform : obj.platform,
+                        powered : obj.powered,
                         price : obj.price,
-                        size : obj.size,
                         stock : obj.stock,
+                        type : obj.type,
                         website : obj.website
                     }
                 });
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteExternalStorage": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                externalStorage.remove(obj._id);
             }
         }
     }

@@ -5,18 +5,20 @@ Meteor.methods({
         if(user){
             if (user.roles[0] == "admin") {
                 cpu.insert({
-                    name: obj.name,
-                    manufacturer: obj.manufacturer,
-                    model: obj.model,
-                    socket: obj.socket,
-                    price: obj.price,
-                    description: obj.description,
-                    website: obj.website,
-                    stock: "0"
+                    benchmarkUrl1 : obj.benchmarkUrl1,
+                    benchmarkUrl2 : obj.benchmarkUrl2,
+                    cacheSize : obj.cacheSize,
+                    clockSpeedMin : obj.clockSpeedMin,
+                    clockSpeedMax : obj.clockSpeedMax,
+                    coreNumbers : obj.coreNumbers ,
+                    generation : obj.generation,
+                    manufacturer : obj.manufacturer,
+                    model : obj.model,
+                    name : obj.name,
+                    price : obj.price,
+                    stock : obj.stock,
+                    website : obj.website
                 });
-            }
-            else {
-                console.log("No authorseru!!!");
             }
         }
     },
@@ -25,19 +27,21 @@ Meteor.methods({
             if (user.roles[0] == "admin") {
                 cpu.update(id,{
                     $set:{
-                        name: obj.name,
-                        manufacturer: obj.manufacturer,
-                        model: obj.model,
-                        socket: obj.socket,
-                        price: obj.price,
-                        description: obj.description,
-                        website: obj.website,
-                        stock: obj.stock
+                        benchmarkUrl1 : obj.benchmarkUrl1,
+                        benchmarkUrl2 : obj.benchmarkUrl2,
+                        cacheSize : obj.cacheSize,
+                        clockSpeedMin : obj.clockSpeedMin,
+                        clockSpeedMax : obj.clockSpeedMax,
+                        coreNumbers : obj.coreNumbers ,
+                        generation : obj.generation,
+                        manufacturer : obj.manufacturer,
+                        model : obj.model,
+                        name : obj.name,
+                        price : obj.price,
+                        stock : obj.stock,
+                        website : obj.website
                     }
                 });
-            }
-            else {
-                console.log("No authorseru!!!");
             }
         }
     },
@@ -48,30 +52,6 @@ Meteor.methods({
             }
             else {
                 console.log("No authorseru!!!");
-            }
-        }
-    },
-    "increaseCpu": (obj, user)=>{
-        let stock = obj.stock;
-        stock++;
-
-        if (user) {
-            if (user.roles[0] == "admin") {
-                cpu.update(obj._id, {
-                    $set: {stock: stock}
-                });
-            }
-        }
-    },
-    "decreaseCpu": (obj, user)=> {
-        let stock = obj.stock;
-        stock--;
-
-        if (user) {
-            if (user.roles[0] == "admin") {
-                cpu.update(obj._id, {
-                    $set: {stock: stock}
-                });
             }
         }
     }

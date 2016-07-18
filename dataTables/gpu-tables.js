@@ -1,11 +1,11 @@
-import { cpu } from "../imports/collections/collections";
+import { gpu } from "../imports/collections/collections";
 import { Tabular } from "meteor/aldeed:tabular";
 
 TabularTables = {};
 
-TabularTables.Processors = new Tabular.Table({
-    name: "Processors",
-    collection: cpu,
+TabularTables.Gpu = new Tabular.Table({
+    name: "Gpu",
+    collection: gpu,
     order: [[0 , 'asc']],
     scrollCollapse:true,
     scrollX:true,
@@ -16,7 +16,7 @@ TabularTables.Processors = new Tabular.Table({
         {data: "name", title: "Name"},
         {data: "manufacturer", title: "Manufacturer"},
         {data: "model", title: "Model"},
-        {data: "socket", title: "Socket"},
+        {data: "memory", title: "Memory"},
         {data: "price", title: "Price"},
         {data: "website", title: "Website"},
         {data: "stock", title: "Available"},

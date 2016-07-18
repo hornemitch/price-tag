@@ -72,7 +72,7 @@ a:active{
 }
 .form-container{
     border-radius: 10px;
-    box-shadow: 0 0 5px #333;
+    box-shadow: 0 4px 10px 1px #333;
     padding: 30px 30px 50px;
     text-align: left;
 }
@@ -103,6 +103,22 @@ a:active{
 .form-container input:active,
 .form-container input:focus{
     border: 1px solid #71A763;
+}
+.form-container select{
+    border: 1px solid #999;
+    border-radius: 10px;
+    color: transparent;
+    font-size: 1.3em;
+    padding:5px;
+    text-shadow: 0 0 0 #000;
+    transition: all .2s;
+    width: 100%;
+}
+.form-container select:hover,
+.form-container select:active,
+.form-container select:focus{
+    border: 1px solid #71A763;
+    cursor: pointer;
 }
 .form-container textarea{
     border: 1px solid #999;
@@ -140,6 +156,10 @@ a:active{
     text-align: left;
 }
 .table-condensed > tbody > tr > td{
+    padding-right: 10px;
+    text-align: right;
+}
+.table-condensed > tbody > tr > td .pull-left{
     padding-left: 10px;
     text-align: left;
 }
@@ -150,8 +170,16 @@ a:active{
     background: #71A763;
     border: 1px solid #71A763;
 }
-.pagination > a:hover{
+.pagination > li > a{
     background: #C81F25;
+    border: 1px solid #C81F25;
+    color: #fff;
+    transition: all .2s;
+}
+.pagination > li > a:hover{
+    background: #71A763;
+    border: 1px solid #71A763;
+    color: #fff;
 }
 .page-buttons{
     text-align: left;
@@ -228,16 +256,4 @@ a:active{
 .edit-icon:active{
     color: #E69400;
     text-shadow: 0 0 5px #F7A500;
-}
-.increase-icon:hover,
-.increase-icon:focus,
-.increase-icon:active{
-    color: #00f;
-    text-shadow: 0 0 5px #00e;
-}
-.decrease-icon:hover,
-.decrease-icon:focus,
-.decrease-icon:active{
-    color: #E62000;
-    text-shadow: 0 0 5px #F73000;
 }

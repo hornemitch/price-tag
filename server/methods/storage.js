@@ -1,48 +1,54 @@
-import { memory } from "../../imports/collections/collections";
+import { storage } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addStorage": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
-                    clockSpeed : obj.clockSpeed,
-                    generation : obj.generation,
+                storage.insert({
+                    benchmark1 : obj.benchmark1,
+                    benchmark2 : obj.benchmark2,
+                    capacity : obj.capacity,
                     manufacturer : obj.manufacturer,
                     model : obj.model,
                     name : obj.name,
-                    platform : obj.platform,
                     price : obj.price,
+                    readSpeed : obj.readSpeed,
                     size : obj.size,
                     stock : obj.stock,
+                    type : obj.type,
+                    writeSpeed : obj.writeSpeed,
                     website : obj.website
                 });
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editStorage": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                storage.update(id,{
                     $set:{
-                        clockSpeed : obj.clockSpeed,
-                        generation : obj.generation,
+                        benchmark1 : obj.benchmark1,
+                        benchmark2 : obj.benchmark2,
+                        capacity : obj.capacity,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
-                        platform : obj.platform,
                         price : obj.price,
+                        readSpeed : obj.readSpeed,
                         size : obj.size,
                         stock : obj.stock,
+                        type : obj.type,
+                        writeSpeed : obj.writeSpeed,
                         website : obj.website
                     }
                 });
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteStorage": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                storage.remove(obj._id);
             }
         }
     }

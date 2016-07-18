@@ -7,18 +7,24 @@ Template.ChassisAdd.events({
 
         const user = Meteor.user();
 
-        let Chassis = {
-            name : e.target.name.value,
+        let obj = {
+            caseType : e.target.caseType.value,
+            fanNumber : e.target.fanNumber.value,
             manufacturer : e.target.manufacturer.value,
             model : e.target.model.value,
-            type : e.target.type.value,
+            name : e.target.name.value,
+            opticBayNumber : e.target.opticBayNumber.value,
+            pciSlotNumber : e.target.pciSlotNumber.value,
+            psuMountPos : e.target.psuMountPos.value,
+            sizeHeight : e.target.sizeHeight.value,
+            sizeLength : e.target.sizeLength.value,
+            sizeWidth : e.target.sizeWidth.value,
             price : e.target.price.value,
-            psuMount : e.target.psuMount.value,
-            description : e.target.description.value,
+            stock : e.target.stock.value,
             website : e.target.website.value
         };
 
-        Meteor.call("addChassis", Chassis, user);
+        Meteor.call("addChassis", obj, user);
         FlowRouter.go("/chassis");
     }
 });

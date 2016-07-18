@@ -1,48 +1,48 @@
-import { memory } from "../../imports/collections/collections";
+import { serverRacks } from "../../imports/collections/collections";
 
 Meteor.methods({
-    "addMemory": (obj, user)=>{
+    "addServerRacks": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.insert({
-                    clockSpeed : obj.clockSpeed,
-                    generation : obj.generation,
+                serverRacks.insert({
+                    height : obj.height,
+                    length : obj.length,
                     manufacturer : obj.manufacturer,
                     model : obj.model,
                     name : obj.name,
-                    platform : obj.platform,
                     price : obj.price,
-                    size : obj.size,
                     stock : obj.stock,
-                    website : obj.website
+                    website : obj.website,
+                    weight : obj.weight,
+                    width : obj.width
                 });
             }
         }
     },
-    "editMemory": (id, obj, user)=>{
+    "editServerRacks": (id, obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.update(id,{
+                serverRacks.update(id,{
                     $set:{
-                        clockSpeed : obj.clockSpeed,
-                        generation : obj.generation,
+                        height : obj.height,
+                        length : obj.length,
                         manufacturer : obj.manufacturer,
                         model : obj.model,
                         name : obj.name,
-                        platform : obj.platform,
                         price : obj.price,
-                        size : obj.size,
                         stock : obj.stock,
-                        website : obj.website
+                        website : obj.website,
+                        weight : obj.weight,
+                        width : obj.width
                     }
                 });
             }
         }
     },
-    "deleteMemory": (obj, user)=>{
+    "deleteServerRacks": (obj, user)=>{
         if(user){
             if (user.roles[0] == "admin") {
-                memory.remove(obj._id);
+                serverRacks.remove(obj._id);
             }
         }
     }
